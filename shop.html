@@ -1,6 +1,63 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop | Ace Vogue</title><meta name="description" content="Browse every Ace Vogue piece.">
-<script>if(matchMedia('(max-width:860px),(prefers-reduced-motion:reduce)').matches)document.documentElement.classList.add('flat');if(matchMedia('(prefers-reduced-motion:reduce)').matches)document.documentElement.classList.add('static')</script>
-<link rel="icon" href="img/logo.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head><body data-page="shop"><main><section class="pg"><h1>Shop</h1><p>Three pieces for now. Filter by category, search by name, sort by price, and pick a size on any card.</p></section><div class="tools"><div class="cats" id="cats" role="group" aria-label="Category"><button data-c="All" aria-pressed="true">All</button><button data-c="Tops" aria-pressed="false">Tops</button><button data-c="Bottoms" aria-pressed="false">Bottoms</button></div>
-<div class="f"><label>Search<input id="q" type="search" placeholder="Search pieces"></label><label>Sort<select id="so"><option value="new">Newest</option><option value="lo">Price, low to high</option><option value="hi">Price, high to low</option><option value="az">Name, A to Z</option></select></label><span id="cnt" role="status" style="color:var(--mute)"></span></div></div><div class="grid" id="grid"></div></main><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script src="js/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop | Ace Vogue</title>
+    <meta name="description" content="Browse every Ace Vogue piece." />
+    <script>
+      if (
+        matchMedia("(max-width:860px),(prefers-reduced-motion:reduce)").matches
+      )
+        document.documentElement.classList.add("flat");
+      if (matchMedia("(prefers-reduced-motion:reduce)").matches)
+        document.documentElement.classList.add("static");
+    </script>
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700&family=Instrument+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="shop">
+    <main>
+      <section class="pg">
+        <h1>Shop</h1>
+        <p>
+          Pieces for getting dressed, every day. Find your fit, search the
+          collection, or browse what’s new.
+        </p>
+      </section>
+      <div class="tools">
+        <div class="cats" id="cats" role="group" aria-label="Category">
+          <button data-c="All" aria-pressed="true">All</button
+          ><button data-c="New in" aria-pressed="false">New in</button
+          ><button data-c="Tops" aria-pressed="false">Tops</button
+          ><button data-c="Bottoms" aria-pressed="false">Bottoms</button>
+        </div>
+        <div class="f">
+          <label
+            >Search<input
+              id="q"
+              type="search"
+              placeholder="Search pieces" /></label
+          ><label
+            >Sort<select id="so">
+              <option value="new">Newest</option>
+              <option value="lo">Price, low to high</option>
+              <option value="hi">Price, high to low</option>
+              <option value="az">Name, A to Z</option>
+            </select></label
+          ><span id="cnt" role="status" style="color: var(--mute)"></span>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
