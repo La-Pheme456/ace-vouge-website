@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* ACE VOGUE - shared logic. Edit PRODUCTS and CONFIG below. */
+  /* ACE VOUGE - shared logic. Edit PRODUCTS and CONFIG below. */
   const CONFIG = {
-    email: "hello@acevogue.example", // PLACEHOLDER: contact form opens a mail draft to this address
+    email: "hello@acevouge.example", // PLACEHOLDER: contact form opens a mail draft to this address
     phone: "+234 911 576 6872",
     address: "Address to be added",
     social: {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "logo-tee",
-      name: "Ace Vogue Logo Tee",
+      name: "Ace VOUGE Logo Tee",
       cat: "Tops",
       price: 22000,
       color: "White",
@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
       dark: false,
       a: "img/tee-logo-front.png",
       b: "img/tee-logo-back.png",
-      desc: "An oversized white tee with the Ace Vogue mark and wordmark in black on the chest. A clean, plain back.",
+      desc: "An oversized white tee with the Ace VOUGE mark and wordmark in black on the chest. A clean, plain back.",
       det: [
         ["Fit", "Oversized (as shown in photography)"],
-        ["Front", "Ace Vogue mark and wordmark, chest"],
+        ["Front", "Ace VOUGE mark and wordmark, chest"],
         ["Back", "Plain"],
         ["Fabric and care", "Details to be added"],
       ],
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dark: true,
       a: "img/knicker-front.png",
       b: "img/knicker-back.png",
-      desc: "Knee-length black denim with a washed finish and a wide leg. A silver chain hangs from the belt loop, the Ace Vogue mark sits on the front, and a woven label finishes the back waistband.",
+      desc: "Knee-length black denim with a washed finish and a wide leg. A silver chain hangs from the belt loop, the Ace VOUGE mark sits on the front, and a woven label finishes the back waistband.",
       det: [
         ["Length", "Knee-length (as shown in photography)"],
         ["Detail", "Silver chain, front logo, back label"],
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "logo-tank-white",
-      name: "Ace Vogue Logo Tank",
+      name: "Ace VOUGE Logo Tank",
       cat: "Tops",
       price: 22000,
       color: "White",
@@ -84,17 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
       single: true,
       a: "img/tank-white.png",
       b: "img/tank-white.png",
-      desc: "A clean white tank with the Ace Vogue mark at the chest. Easy on its own, easy to layer.",
+      desc: "A clean white tank with the Ace VOUGE mark at the chest. Easy on its own, easy to layer.",
       det: [
         ["Fit", "Sleeveless, as shown in photography"],
-        ["Front", "Ace Vogue mark at chest"],
+        ["Front", "Ace VOUGE mark at chest"],
         ["Back", "Plain"],
         ["Fabric and care", "Details to be added"],
       ],
     },
     {
       id: "logo-tank-grey",
-      name: "Ace Vogue Logo Tank",
+      name: "Ace VOUGE Logo Tank",
       cat: "Tops",
       price: 22000,
       color: "Grey",
@@ -105,17 +105,17 @@ document.addEventListener("DOMContentLoaded", () => {
       single: true,
       a: "img/tank-grey.png",
       b: "img/tank-grey.png",
-      desc: "A soft grey tank with the Ace Vogue mark at the chest. An understated everyday layer.",
+      desc: "A soft grey tank with the Ace VOUGE mark at the chest. An understated everyday layer.",
       det: [
         ["Fit", "Sleeveless, as shown in photography"],
-        ["Front", "Ace Vogue mark at chest"],
+        ["Front", "Ace VOUGE mark at chest"],
         ["Back", "Plain"],
         ["Fabric and care", "Details to be added"],
       ],
     },
     {
       id: "logo-tank-black",
-      name: "Ace Vogue Logo Tank",
+      name: "Ace VOUGE Logo Tank",
       cat: "Tops",
       price: 22000,
       color: "Black",
@@ -126,10 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
       single: true,
       a: "img/tank-black.png",
       b: "img/tank-black.png",
-      desc: "A black tank with a quiet Ace Vogue chest mark. A versatile piece for warm days and easy layering.",
+      desc: "A black tank with a quiet Ace VOUGE chest mark. A versatile piece for warm days and easy layering.",
       det: [
         ["Fit", "Sleeveless, as shown in photography"],
-        ["Front", "Ace Vogue mark at chest"],
+        ["Front", "Ace VOUGE mark at chest"],
         ["Back", "Plain"],
         ["Fabric and care", "Details to be added"],
       ],
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML(
     "afterbegin",
     `<a class="sm" href="#main" style="position:absolute;left:-999px">Skip to content</a>
-  <header class="hd"><a class="lg" href="index.html" aria-label="Ace Vogue home"><img src="img/logo.png" alt="Ace Vogue"></a>
+  <header class="hd"><a class="lg" href="index.html" aria-label="Ace VOUGE home"><img src="img/logo.png" alt="Ace VOUGE"></a>
   <div class="rt"><nav id="nv" aria-label="Main">${nav.map((n) => `<a href="${n[0]}" class="${page === n[2] ? "on" : ""}">${n[1]}</a>`).join("")}</nav>
   <button class="ct" id="oc" aria-label="Open cart">Cart (<span id="cc">0</span>)</button><button class="bg" id="bg" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></div></header>
   <div class="cur" id="cur"></div><div id="shd"></div>
@@ -171,11 +171,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .join("");
   document.body.insertAdjacentHTML(
     "beforeend",
-    `<footer class="ft"><div class="tp"><div><img src="img/logo.png" alt="Ace Vogue" style="height:90px;margin-bottom:18px"><p>Silence. Strategy. Success.</p></div>
+    `<footer class="ft"><div class="tp"><div><img src="img/logo.png" alt="Ace VOUGE" style="height:90px;margin-bottom:18px"><p>Silence. Strategy. Success.</p></div>
   <div><h4>Explore</h4><ul><li><a href="shop.html">Shop all</a></li><li><a href="shop.html?cat=New%20in">New in</a></li><li><a href="shop.html?cat=Tops">Tops</a></li><li><a href="shop.html?cat=Bottoms">Bottoms</a></li></ul></div>
   <div><h4>Brand</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-  <div><h4>Follow</h4><ul>${so}</ul></div></div><div class="big" aria-hidden="true">Ace Vogue</div>
-  <div class="note">&copy; <span id="yr"></span> Ace Vogue.</div></footer>`,
+  <div><h4>Follow</h4><ul>${so}</ul></div></div><div class="big" aria-hidden="true">Ace VOUGE</div>
+  <div class="note">&copy; <span id="yr"></span> Ace VOUGE.</div></footer>`,
   );
   $("#yr").textContent = new Date().getFullYear();
   $$("a[aria-disabled]").forEach((a) =>
@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     const message = [
-      "Hello Ace Vogue! I hope you’re doing well. I’d like to place this order:",
+      "Hello Ace VOUGE! I hope you’re doing well. I’d like to place this order:",
       "",
       ...lines,
       "",
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
         p,
         i,
       ) => `<article class="showcase-slide" data-dark="${p.dark}" role="group" aria-roledescription="product" aria-label="${i + 1} of ${PRODUCTS.length}: ${p.name}, ${p.color}">
-    <a class="showcase-visual ${p.single ? "one-image" : ""}" href="product.html?id=${p.id}" tabindex="-1" aria-hidden="true"><span class="showcase-aura"></span><div class="showcase-product">${p.single ? "" : `<img class="showcase-back" src="${p.b}" alt="" loading="lazy">`}<img class="showcase-front" src="${p.a}" alt="" loading="lazy"></div><span class="showcase-visual-label">ACE VOGUE · ${String(i + 1).padStart(2, "0")}</span></a>${copy(p, i, "showcase-static-copy")}
+    <a class="showcase-visual ${p.single ? "one-image" : ""}" href="product.html?id=${p.id}" tabindex="-1" aria-hidden="true"><span class="showcase-aura"></span><div class="showcase-product">${p.single ? "" : `<img class="showcase-back" src="${p.b}" alt="" loading="lazy">`}<img class="showcase-front" src="${p.a}" alt="" loading="lazy"></div><span class="showcase-visual-label">ACE VOUGE · ${String(i + 1).padStart(2, "0")}</span></a>${copy(p, i, "showcase-static-copy")}
    </article>`,
     ).join("");
     info.innerHTML = PRODUCTS.map((p, i) => copy(p, i)).join("");
@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (page === "product") {
     const p = byId(qs.get("id")) || PRODUCTS[0];
-    document.title = p.name + " | Ace Vogue";
+    document.title = p.name + " | Ace VOUGE";
     let size = "M",
       qty = 1,
       flipped = false;
