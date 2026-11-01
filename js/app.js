@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ACE VOUGE - shared logic. Edit PRODUCTS and CONFIG below. */
   const CONFIG = {
-    email: "hello@acevouge.example", // PLACEHOLDER: contact form opens a mail draft to this address
+    email: "toheebyunusa070510@gmail.com", // Contact form opens a mail draft to this address
     phone: "+234 911 576 6872",
     address: "Address to be added",
     social: {
@@ -15,40 +15,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const PRODUCTS = [
     // PLACEHOLDER prices (NGN) and descriptions: edit freely
     {
-      id: "silence-tee",
-      name: "Silence. Strategy. Success. Tee",
-      cat: "Tops",
-      price: 25000,
-      color: "White",
-      colorHex: "#F2F3F0",
-      date: 3,
-      dark: false,
-      a: "img/tee-ss-front.png",
-      b: "img/tee-ss-back.png",
-      desc: "An oversized white tee. A small spade mark sits on the chest. Across the back, the line the label is built on: Silence. Strategy. Success.",
-      det: [
-        ["Fit", "Oversized (as shown in photography)"],
-        ["Front", "Spade mark, chest"],
-        ["Back", "Silence. Strategy. Success."],
-        ["Fabric and care", "Details to be added"],
-      ],
-    },
-    {
       id: "logo-tee",
-      name: "Ace VOUGE Logo Tee",
+      name: "Ace VOUGE Monogram Tee",
       cat: "Tops",
       price: 22000,
       color: "White",
       colorHex: "#F2F3F0",
       date: 2,
       dark: false,
-      a: "img/tee-logo-front.png",
-      b: "img/tee-logo-back.png",
-      desc: "An oversized white tee with the Ace VOUGE mark and wordmark in black on the chest. A clean, plain back.",
+      single: true,
+      a: "img/tee-monogram-white.png",
+      b: "img/tee-monogram-white.png",
+      desc: "An oversized white tee covered in the Ace VOUGE monogram, with the pattern carried across the front and back.",
       det: [
         ["Fit", "Oversized (as shown in photography)"],
-        ["Front", "Ace VOUGE mark and wordmark, chest"],
-        ["Back", "Plain"],
+        ["Pattern", "All-over Ace VOUGE monogram"],
+        ["Colour", "White with black print"],
+        ["Fabric and care", "Details to be added"],
+      ],
+    },
+    {
+      id: "logo-tee-black",
+      name: "Ace VOUGE Monogram Tee",
+      cat: "Tops",
+      price: 22000,
+      color: "Black",
+      colorHex: "#111214",
+      date: 1,
+      dark: true,
+      newIn: true,
+      single: true,
+      a: "img/tee-monogram-black.png",
+      b: "img/tee-monogram-black.png",
+      desc: "An oversized black tee with the Ace VOUGE monogram printed across the front and back in white.",
+      det: [
+        ["Fit", "Oversized (as shown in photography)"],
+        ["Pattern", "All-over Ace VOUGE monogram"],
+        ["Colour", "Black with white print"],
         ["Fabric and care", "Details to be added"],
       ],
     },
@@ -141,7 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const byId = (id) => PRODUCTS.find((p) => p.id === id);
   let cart = [];
   try {
-    cart = JSON.parse(localStorage.getItem("av_cart")) || [];
+    cart = (JSON.parse(localStorage.getItem("av_cart")) || []).filter((item) =>
+      PRODUCTS.some((product) => product.id === item.id),
+    );
+    localStorage.setItem("av_cart", JSON.stringify(cart));
   } catch (e) {}
   const page = document.body.dataset.page;
   if (!window.gsap || !window.ScrollTrigger)
@@ -156,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.insertAdjacentHTML(
     "afterbegin",
     `<a class="sm" href="#main" style="position:absolute;left:-999px">Skip to content</a>
-  <header class="hd"><a class="lg" href="index.html" aria-label="Ace VOUGE home"><img src="img/logo.png" alt="Ace VOUGE"></a>
+  <header class="hd"><a class="lg" href="index.html" aria-label="Ace VOUGE home"><img src="img/logo.png" alt="Ace VOUGE crowned AV mark"></a>
   <div class="rt"><nav id="nv" aria-label="Main">${nav.map((n) => `<a href="${n[0]}" class="${page === n[2] ? "on" : ""}">${n[1]}</a>`).join("")}</nav>
   <button class="ct" id="oc" aria-label="Open cart">Cart (<span id="cc">0</span>)</button><button class="bg" id="bg" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></div></header>
   <div class="cur" id="cur"></div><div id="shd"></div>
@@ -171,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .join("");
   document.body.insertAdjacentHTML(
     "beforeend",
-    `<footer class="ft"><div class="tp"><div><img src="img/logo.png" alt="Ace VOUGE" style="height:90px;margin-bottom:18px"><p>Silence. Strategy. Success.</p></div>
+    `<footer class="ft"><div class="tp"><div><img src="img/logo.png" alt="Ace VOUGE crowned AV mark" style="height:90px;margin-bottom:18px"><p>Silence. Strategy. Success.</p></div>
   <div><h4>Explore</h4><ul><li><a href="shop.html">Shop all</a></li><li><a href="shop.html?cat=New%20in">New in</a></li><li><a href="shop.html?cat=Tops">Tops</a></li><li><a href="shop.html?cat=Bottoms">Bottoms</a></li></ul></div>
   <div><h4>Brand</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
   <div><h4>Follow</h4><ul>${so}</ul></div></div><div class="big" aria-hidden="true">Ace VOUGE</div>
@@ -356,7 +362,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "logo-tank-white",
       "logo-tee",
       "denim-knickers",
-      "silence-tee",
     ]
       .map(byId)
       .map(card)
